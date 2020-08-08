@@ -1,0 +1,37 @@
+/*General*/
+* { box-sizing: border-box; margin: 0; padding: 0 }
+body { font-family: 'Roboto', Helvetica, sans-serif }
+.center { text-align: center }
+.container { width: 1024px; margin: 0 auto }
+::placeholder { color: #154f3c; opacity: 1 }
+:-ms-input-placeholder { color: #154f3c }
+::-ms-input-placeholder { color: #154f3c }
+
+/*Header*/
+.top { text-align: center; padding: 40px 0 0 0 }
+.top .top__search-characters { padding: 40px 20px }
+.top .top__search-characters__form__input { padding: 20px 65px 20px 20px; border: solid 3px #154f3c; color: #154f3c; width: 400px; outline: none; font-size: 20px; background: url('img/ico-search.png') no-repeat right center }
+
+/*Content*/
+.characters .characters__item { padding: 10px; margin-bottom: 20px }
+.characters .characters__item:hover { -webkit-box-shadow:inset 0px 0px 0px 3px #154f3c; -moz-box-shadow:inset 0px 0px 0px 3px #154f3c; box-shadow:inset 0px 0px 0px 3px #154f3c }
+.characters .characters__item__mask { height: 300px; overflow: hidden; margin-bottom: 10px; position: relative }
+.characters .characters__item__mask__portrayed { position: absolute; bottom: 0px; color: #fff; width: 100%; padding:10px ; background: rgb(12,86,50); background: -moz-linear-gradient(130deg, rgba(12,86,50,1) 57%, rgba(11,143,58,1) 100%); background: -webkit-linear-gradient(130deg, rgba(12,86,50,1) 57%, rgba(11,143,58,1) 100%); background: linear-gradient(130deg, rgba(12,86,50,1) 57%, rgba(11,143,58,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c5632",endColorstr="#0b8f3a",GradientType=1) }
+.characters .characters__item__mask__img { width: 100%; margin-bottom: 10px }
+.characters .characters__item__info { padding: 0 10px 10px 10px }
+.characters .characters__item__info__description { padding: 3px }
+.characters .characters__item__info__description strong { color: #154f3c; font-weight: 500 }
+
+@media screen and ( max-width: 1024px) {
+  .container { width: 100%; padding: 30px }
+}
+
+@media screen and (max-width: 768px) {
+  .container { width: 100% }
+  .top .top__search-characters { padding: 40px 0 }
+  .top .top__search-characters__form__input { width: 100% }
+}
+
+@media screen and (min-width: 768px) {  
+  .characters .characters__item { display: inline-block; width: 33% }
+}
